@@ -29,6 +29,9 @@ rc_config()
   tar -zxvf "$BUNDLE_DIR/$PLUGIN_NAME.tar.gz"
   mv "$PLUGIN_NAME-$POLYGLOT_VERSION" "$BUNDLE_DIR/$PLUGIN_NAME"
   rm -f "$BUNDLE_DIR/$PLUGIN_NAME.tar.gz"
+
+  # install ctrlp to search files and stuff
+  git clone https://github.com/ctrlpvim/ctrlp.vim.git "$BUNDLE_DIR/ctrlp"
 }
 
 rc_precheck()

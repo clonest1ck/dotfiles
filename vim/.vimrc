@@ -6,6 +6,9 @@ set softtabstop=2         " IF using tabs, 1 <TAB> = 2 spaces
 set expandtab             " Use spaces for indentation
 filetype plugin indent on " load indentation files 
 
+" Editor settings
+set number                " enable line numbers
+
 " Required for vim-polygot
 set nocompatible
 
