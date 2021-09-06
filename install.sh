@@ -25,7 +25,8 @@ for DIRECTORY in */ ; do
       
       mkdir -p "$TARGET_DIR/$CONF_DIR"
       cp "$DIRECTORY/$RC" "$TARGET_DIR/"
-      
+      sed -i "s/%WHOAMI%/$(whoami)/g" "$TARGET_DIR/$RC"
+
       rc_config $RC $CONF_DIR $TARGET_DIR
       echo "$DIRECTORY" >> $PROGRESS_FILE
     else

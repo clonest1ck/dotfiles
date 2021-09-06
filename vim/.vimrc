@@ -9,6 +9,10 @@ filetype plugin indent on " load indentation files
 " Editor settings
 set number                " enable line numbers
 
+" Undo between runs
+set undofile
+set undodir=/home/%WHOAMI%/.vim/undo
+
 " Required for vim-polygot
 set nocompatible
 

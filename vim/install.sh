@@ -12,7 +12,7 @@ rc_config()
   TARGET_DIR=$3
   
   # Create directories
-  mkdir -p $TARGET_DIR/$CONF_DIR/{autoload,bundle,indent}
+  mkdir -p $TARGET_DIR/$CONF_DIR/{autoload,bundle,indent,undo}
 
   BUNDLE_DIR="$TARGET_DIR/$CONF_DIR/bundle"
 
