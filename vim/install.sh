@@ -22,6 +22,14 @@ rc_config()
   # install onedark color scheme
   git clone https://github.com/joshdick/onedark.vim "$BUNDLE_DIR/onedark"
 
+  # install fzf
+  git clone https://github.com/junegunn/fzf "$BUNDLE_DIR/fzf"
+  BACKUP_CWD=$(pwd)
+  cd "$BUNDLE_DIR/fzf"
+  make
+  make install
+  cd "$BACKUP_CWD"
+
   # install vim-polyglot language packs
   POLYGLOT_VERSION=4.17.0
   PLUGIN_NAME="vim-polyglot"
@@ -36,6 +44,6 @@ rc_config()
 
 rc_precheck()
 {
-  check_command curl && check_command git
+  check_command curl && check_command git && check_command go
 }
 
